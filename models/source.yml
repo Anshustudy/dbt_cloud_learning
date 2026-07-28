@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: db_src
+    database: study  
+    schema: study  
+    tables:
+      - name: weather
+      - name: bike
+
+ 
