@@ -1,4 +1,4 @@
-{% macro station_of_year %}
+{% macro station_of_year() %}
     case
         when month(to_timestamp(started_at)) in (12, 1, 2)
         then 'WINTER'
