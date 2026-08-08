@@ -18,7 +18,7 @@ with
                 then 'SUMMER'
                 else 'AUTUMN'
             end as station_of_year,
-            {{ station_of_year }} as station_of_year_macro
+            {{ station_of_year() }} as station_of_year_macro
 
         from {{ source("db_src", "bike") }}
         where started_at != 'started_at'
