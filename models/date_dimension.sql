@@ -17,7 +17,8 @@ with
                 when month(to_timestamp(started_at)) in (6, 7, 8)
                 then 'SUMMER'
                 else 'AUTUMN'
-            end as station_of_year
+            end as station_of_year,
+            {{ station_of_year }} as station_of_year_macro
 
         from {{ source("db_src", "bike") }}
         where started_at != 'started_at'
