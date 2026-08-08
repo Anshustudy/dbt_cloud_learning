@@ -8,4 +8,4 @@
         then 'SUMMER'
         else 'AUTUMN'
     end as station_of_year
-    {% end macro %}
+{% endmacro %}
