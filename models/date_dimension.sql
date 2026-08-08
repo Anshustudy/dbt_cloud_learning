@@ -9,7 +9,7 @@ with
                 then 'WEEKND'
                 else 'BUSINESSDAY'
             end as day_type,
-            {{ station_of_year("started_at") }} as station_of_year
+            {{ station_of_year('started_at') }} as station_of_year
 
         from {{ source("db_src", "bike") }}
         where started_at != 'started_at'
