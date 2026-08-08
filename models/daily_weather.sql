@@ -8,10 +8,10 @@ with
         select
             daily_weather,
             weather,
-            avg(clouds) as clouds,
-            avg(humidity) as humidity,
-            avg(pressure) as pressure,
-            avg(temp) as temp
+            avg(clouds) as avg_clouds,
+            avg(humidity) as avg_humidity,
+            avg(pressure) as avg_pressure,
+            avg(temp) as avg_temp
         from cte_weather
         group by daily_weather, weather
         qualify
